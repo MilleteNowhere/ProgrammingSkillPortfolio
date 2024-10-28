@@ -1,10 +1,13 @@
-#Enables While Loop.
+#Enables the While loop for any code that falls under the loop
 while True:
-    Name = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"] #Creates a list of names
-    Input = input("Search for Name?: ") #Grabs user input
+    
+    #Create a name dictionary with capability for userinput
+    Name = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"]
+    Input = input("Search for Name?: ")
 
-    if Input in Name: #Checks if Name input is in list.
+# checks if Userinput is within the dictionary and stops loop if true, but continues it if invalid
+    if Input in Name:
         print(f"Name found: {Input}")
-        break #Breaks loop if name is found
+        break
     else:
         print(f"'{Input}' This name is not in the List.")
