@@ -1,13 +1,16 @@
 #Enables the While loop for any code that falls under the loop
 while True:
+    ATMPT = 5
+    FailedATMPT = (ATMPT - 1)
+    CorrectPass = input ("Please input Passcode here: ")
     
-    #Create a name dictionary with capability for userinput
-    Name = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"]
-    Input = input("Search for Name?: ")
-
-# checks if Userinput is within the dictionary and stops loop if true, but continues it if invalid
-    if Input in Name:
-        print(f"Name found: {Input}")
+    if CorrectPass == "12345":
+        print ("Password Correct, Welcome Back")
         break
     else:
-        print(f"'{Input}' This name is not in the List.")
+        print (f"Incorrect passsword you have..{FailedATMPT} Tries left. Please try again.")
+        FailedATMPT -- 1
+        if FailedATMPT < 0:
+            print ("All attempts failed. Local authororities contacted. Have a great day.")
+            break
+        continue
